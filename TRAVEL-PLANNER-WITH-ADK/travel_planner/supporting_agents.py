@@ -4,7 +4,7 @@ from travel_planner.tools import google_search_grounding, location_search_tool
 LLM = "gemini-3-pro-preview"
 
 
-# ---------------- NEWS AGENT ----------------
+# -- NEWS AGENT --
 news_agent = Agent(
     model=LLM,
     name="news_agent",
@@ -19,7 +19,7 @@ news_agent = Agent(
 )
 
 
-# ---------------- PLACES AGENT ----------------
+# -- PLACES AGENT --
 places_agent = Agent(
     model=LLM,
     name="places_agent",
@@ -37,7 +37,7 @@ places_agent = Agent(
 )
 
 
-# ---------------- MAIN TRAVEL INSPIRATION AGENT ----------------
+# --- MAIN TRAVEL INSPIRATION AGENT --
 travel_inspiration_agent = Agent(
     model=LLM,
     name="travel_planner_main",
@@ -63,3 +63,4 @@ travel_inspiration_agent = Agent(
         AgentTool(agent=places_agent)
     ]
 )
+
